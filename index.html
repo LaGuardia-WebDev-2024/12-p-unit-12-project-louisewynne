@@ -26,12 +26,12 @@ Select ONE Additional Feature to Add
     <!-- Movie Question -->
     <form id="movie-form">
       <label>
-        🎥 What is my favorite movie?
+        What is my favorite movie?
         <select id="movie-answer">
-          <option value="movie1">movie 1</option>
-          <option value="movie2">movie 2</option>
-          <option value="movie3">movie 3</option>
-          <option value="movie4">movie 4</option>
+          <option value="movie1">Drop Dead Gorgeous</option>
+          <option value="movie2">Princess Bride</option>
+          <option value="movie3">Pride and Prejudice (2011)</option>
+          <option value="movie4">Twilight</option>
         </select>
       </label>
       <button type="submit">Check Movie Answer</button>
@@ -43,18 +43,50 @@ Select ONE Additional Feature to Add
     <!-- Book Question -->
     <form id="book-form">
       <label>
-        📖 What is my favorite book?
+        What is my favorite book?
         <select id="book-answer">
-          <option value="book1">book 1</option>
-          <option value="book2">book 2</option>
-          <option value="book3">book 3</option>
-          <option value="book4">book 4</option>
+          <option value="book1">Frankenstein by Mary Shelley</option>
+          <option value="book2">Portrait of Dorian Grey by Oscar Wild</option>
+          <option value="book3">The Little Mermaid by Hans Christian Anderson</option>
+          <option value="book4">Wuthering Heights by Emily Bronte</option>
         </select>
       </label>
       <button type="submit">Check Book Answer</button>
     </form>
     <div id="book-result">
       <p id="book-text"></p>
+    </div>
+    <!-- Album Question -->
+    <form id="album-form">
+      <label>
+        What is my favorite album?
+        <select id="album-answer">
+          <option value="album1">Like a Prayer by Madonna</option>
+          <option value="album2">Purple Rain by Prince</option>
+          <option value="album3">Lifes Too Good by The Sugarcubes</option>
+          <option value="album4">Kisses from My Sweetheart the Drunk by Jeff Buckley</option>
+        </select>
+      </label>
+      <button type="submit">Check album Answer</button>
+    </form>
+    <div id="album-result">
+      <p id="album-text"></p>
+    </div>
+    <!-- Painting Question -->
+    <form id="painting-form">
+      <label>
+        What is my favorite panting?
+        <select id="painting-answer">
+          <option value="painting1">Dream of the Shepherd by Ferdinand Hodler</option>
+          <option value="painting2">Music by Gustav Klimpt</option>
+          <option value="painting3">Yellow Dancers (In the Wings) by Eduard Degas</option>
+          <option value="painting4">Portrait of Madame X by John Singer Sargent</option>
+        </select>
+      </label>
+      <button type="submit">Check painting Answer</button>
+    </form>
+    <div id="painting-result">
+      <p id="painting-text"></p>
     </div>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
     <script>
@@ -66,8 +98,8 @@ Select ONE Additional Feature to Add
         var $answer = $("#movie-answer");
         var answer = $answer.val();
 
-        if (answer === "movie1") {
-          $("#movie-text").text("YESSSS!");
+        if (answer === "movie2") {
+          $("#movie-text").text("Yep");
         } 
         else {
           $("#movie-text").text("Try Again!");
@@ -81,11 +113,41 @@ Select ONE Additional Feature to Add
         var $answer = $("#book-answer");
         var answer = $answer.val();
 
-        if (answer === "book1") {
-          $("#book-text").text("YESSSS!");
+        if (answer === "book4") {
+          $("#book-text").text("Yep");
         } 
         else {
           $("#book-text").text("Try Again!");
+        }
+      });
+
+      //=======================Album Question jQuery Code
+      $("#album-form").on("submit", function (event) {
+        event.preventDefault();
+
+        var $answer = $("#album-answer");
+        var answer = $answer.val();
+
+        if (answer === "album3") {
+          $("#album-text").text("Yep");
+        } 
+        else {
+          $("#album-text").text("Try Again!");
+        }
+      });
+
+      //=======================Painting Question jQuery Code
+      $("#painting-form").on("submit", function (event) {
+        event.preventDefault();
+
+        var $answer = $("#painting-answer");
+        var answer = $answer.val();
+
+        if (answer === "painting1") {
+          $("#painting-text").text("Yep");
+        } 
+        else {
+          $("#painting-text").text("Try Again!");
         }
       });
       
