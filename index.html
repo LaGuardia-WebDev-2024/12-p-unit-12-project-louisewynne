@@ -1,9 +1,9 @@
 <!-- Unit 12 Project
 Requirements
-[  ] Two Interactive Drop-down Inputs 
+[ yes ] Two Interactive Drop-down Inputs 
 [  ] Standard Animation
 [  ] Custom Animation
-[  ] Include Three Images
+[ yes ] Include Three Images
 
 Select ONE Additional Feature to Add  
 [ no ] Feature 1 - Google Font
@@ -21,12 +21,14 @@ Select ONE Additional Feature to Add
     <link href="style.css" rel="stylesheet" type="text/css" />
   </head>
   <body>
-    <h1>Quiz About [Me]</h1>
+    <h1>Quiz About Me (louise)</h1>
     <hr />
     <!-- Movie Question -->
+    <div class="container">
     <form id="movie-form">
+      <div class="q1">
       <label>
-        What is my favorite movie?
+        What is my favorite movie?<br>
         <select id="movie-answer">
           <option value="movie1">Drop Dead Gorgeous</option>
           <option value="movie2">Princess Bride</option>
@@ -34,13 +36,17 @@ Select ONE Additional Feature to Add
           <option value="movie4">Twilight</option>
         </select>
       </label>
+      <br>
       <button type="submit">Check Movie Answer</button>
     </form>
     <div id="movie-result">
       <p id="movie-text"></p>
+      <img class="movie-img" width="100px">
     </div>
-    <hr />
+    
+  </div>
     <!-- Book Question -->
+     <div class="q2">
     <form id="book-form">
       <label>
         What is my favorite book?
@@ -55,8 +61,11 @@ Select ONE Additional Feature to Add
     </form>
     <div id="book-result">
       <p id="book-text"></p>
+      <img class="book-img" width="100px">
     </div>
+  </div>
     <!-- Album Question -->
+     <div class="q3">
     <form id="album-form">
       <label>
         What is my favorite album?
@@ -71,8 +80,11 @@ Select ONE Additional Feature to Add
     </form>
     <div id="album-result">
       <p id="album-text"></p>
+      <img class="album-img" width="100px">
     </div>
+  </div>
     <!-- Painting Question -->
+     <div class="q4">
     <form id="painting-form">
       <label>
         What is my favorite panting?
@@ -87,6 +99,9 @@ Select ONE Additional Feature to Add
     </form>
     <div id="painting-result">
       <p id="painting-text"></p>
+      <img class="painting-img" width="100px">
+    </div>
+    </div>
     </div>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
     <script>
@@ -100,6 +115,7 @@ Select ONE Additional Feature to Add
 
         if (answer === "movie2") {
           $("#movie-text").text("Yep");
+          $(".movie-img").attr("src", "https://m.media-amazon.com/images/M/MV5BMjM0Nzk5NTc4OV5BMl5BanBnXkFtZTcwMDA2MzgxNA@@._V1_.jpg");
         } 
         else {
           $("#movie-text").text("Try Again!");
@@ -115,6 +131,7 @@ Select ONE Additional Feature to Add
 
         if (answer === "book4") {
           $("#book-text").text("Yep");
+          $(".book-img").attr("src", "https://www.hachettebookgroup.com/wp-content/uploads/2025/04/9781435171503_d23c00.jpg?w=419");
         } 
         else {
           $("#book-text").text("Try Again!");
@@ -130,6 +147,7 @@ Select ONE Additional Feature to Add
 
         if (answer === "album3") {
           $("#album-text").text("Yep");
+          $(".album-img").attr("src", "https://cdn.shoplightspeed.com/shops/636018/files/58615043/132x132x1/one-little-independent-sugarcubes-the-lifes-too-go.jpg");
         } 
         else {
           $("#album-text").text("Try Again!");
@@ -145,6 +163,7 @@ Select ONE Additional Feature to Add
 
         if (answer === "painting1") {
           $("#painting-text").text("Yep");
+          $(".painting-img").attr("src", "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTirJcvX0eFYawJl7_jjOlzcz06pqq4_1yKlA&s");
         } 
         else {
           $("#painting-text").text("Try Again!");
