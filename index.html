@@ -32,8 +32,8 @@ Select ONE Additional Feature to Add
         <select id="movie-answer">
           <option value="movie1">Drop Dead Gorgeous</option>
           <option value="movie2">Princess Bride</option>
-          <option value="movie3">Pride and Prejudice (2011)</option>
-          <option value="movie4">Twilight</option>
+          <option value="movie3">Pride and Prejudice (2005)</option>
+          <option value="movie4">Evita (1996)</option>
         </select>
       </label>
       <br>
@@ -52,7 +52,7 @@ Select ONE Additional Feature to Add
         What is my favorite book?
         <select id="book-answer">
           <option value="book1">Frankenstein by Mary Shelley</option>
-          <option value="book2">Portrait of Dorian Grey by Oscar Wild</option>
+          <option value="book2">Pride and Prejudice by Jane Austin</option>
           <option value="book3">The Little Mermaid by Hans Christian Anderson</option>
           <option value="book4">Wuthering Heights by Emily Bronte</option>
         </select>
@@ -73,9 +73,10 @@ Select ONE Additional Feature to Add
           <option value="album1">Like a Prayer by Madonna</option>
           <option value="album2">Purple Rain by Prince</option>
           <option value="album3">Lifes Too Good by The Sugarcubes</option>
-          <option value="album4">Kisses from My Sweetheart the Drunk by Jeff Buckley</option>
+          <option value="album4">Dilate by Ani Difranco</option>
         </select>
       </label>
+      <br>
       <button type="submit">Check album Answer</button>
     </form>
     <div id="album-result">
@@ -114,13 +115,23 @@ Select ONE Additional Feature to Add
         var answer = $answer.val();
 
         if (answer === "movie2") {
-          $("#movie-text").text("Yep");
+          $("#movie-text").text("Yes😊");
           $(".movie-img").attr("src", "https://m.media-amazon.com/images/M/MV5BMjM0Nzk5NTc4OV5BMl5BanBnXkFtZTcwMDA2MzgxNA@@._V1_.jpg");
         } 
-        else {
-          $("#movie-text").text("Try Again!");
+        if (answer === "movie1"){
+        $("#movie-text").text("I liked it a lot but no");
+        $(".movie-img").attr("src", "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTIk6JKJeUPS4_A3nkIV3fExFOljjMeDT_exIe-aDlyw5GPLfgzjYlItgaInlohVx3F_WEFyQ&s=10");
+        }
+        if (answer === "movie3"){
+          $("#movie-text").text("Try again");
+          $(".movie-img").attr("src", "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS4_53pJuxCINGzaTrYn63I5VE4BGe719D-VXqTj_keG3sD_guZXwnPEF-lBqx-C1pX_3Ja&s=10");
+        }
+        if (answer === "movie4"){
+          $("#movie-text").text("I couldn't even finish this one it was so bad");
+          $(".movie-img").attr("src", "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQMjwQ3_ITEw8LFRVvJYS0O2CmrrAB_rQUwEBuolacDBC6UB7R9w1ejPdTlGtZnUZjoET8u&s=10");
         }
       });
+      
 
       //=======================Book Question jQuery Code
       $("#book-form").on("submit", function (event) {
@@ -129,13 +140,22 @@ Select ONE Additional Feature to Add
         var $answer = $("#book-answer");
         var answer = $answer.val();
 
+        if (answer === "book1") {
+          $("#book-text").text("no");
+          $(".book-img").attr("src", "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRuYoVBmjvXolKvixpu38AiNTT3v1F-5xCaOA&s");
+        } 
+        if (answer === "book2") {
+          $("#book-text").text("nope");
+          $(".book-img").attr("src", "https://m.media-amazon.com/images/I/81NLDvyAHrL._AC_UF1000,1000_QL80_.jpg");
+        } 
+        if (answer === "book3") {
+          $("#book-text").text("try again");
+          $(".book-img").attr("src", "https://images.booksense.com/images/412/851/9781398851412.jpg");
+        } 
         if (answer === "book4") {
           $("#book-text").text("Yep");
           $(".book-img").attr("src", "https://www.hachettebookgroup.com/wp-content/uploads/2025/04/9781435171503_d23c00.jpg?w=419");
         } 
-        else {
-          $("#book-text").text("Try Again!");
-        }
       });
 
       //=======================Album Question jQuery Code
@@ -149,9 +169,19 @@ Select ONE Additional Feature to Add
           $("#album-text").text("Yep");
           $(".album-img").attr("src", "https://cdn.shoplightspeed.com/shops/636018/files/58615043/132x132x1/one-little-independent-sugarcubes-the-lifes-too-go.jpg");
         } 
-        else {
-          $("#album-text").text("Try Again!");
-        }
+        if (answer === "album1") {
+          $("#album-text").text("noo");
+          $(".album-img").attr("src", "https://upload.wikimedia.org/wikipedia/en/0/08/Madonna_-_Like_a_Prayer_album.png");
+        } 
+        if (answer === "album2") {
+          $("#album-text").text("nope");
+          $(".album-img").attr("src", "https://upload.wikimedia.org/wikipedia/en/9/9c/Princepurplerain.jpg");
+        } 
+        if (answer === "album4") {
+          $("#album-text").text("no!");
+          $(".album-img").attr("src", "https://upload.wikimedia.org/wikipedia/en/0/01/Ani_DiFranco_-_Dilate_%28album%29.png");
+        } 
+        
       });
 
       //=======================Painting Question jQuery Code
@@ -165,9 +195,19 @@ Select ONE Additional Feature to Add
           $("#painting-text").text("Yep");
           $(".painting-img").attr("src", "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTirJcvX0eFYawJl7_jjOlzcz06pqq4_1yKlA&s");
         } 
-        else {
-          $("#painting-text").text("Try Again!");
-        }
+        if (answer === "painting2") {
+          $("#painting-text").text("no");
+          $(".painting-img").attr("src", "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRCeXem4colxilxES-NR2xQ62SeA_urKLpOPw&s");
+        } 
+        if (answer === "painting3") {
+          $("#painting-text").text("no");
+          $(".painting-img").attr("src", "https://www.artic.edu/iiif/2/8fe022ba-e358-5cda-aa70-d96edd0b4f20/full/843,/0/default.jpg");
+        } 
+        if (answer === "painting4") {
+          $("#painting-text").text("no");
+          $(".painting-img").attr("src", "https://upload.wikimedia.org/wikipedia/commons/a/a4/Madame_X_%28Madame_Pierre_Gautreau%29%2C_John_Singer_Sargent%2C_1884_%28unfree_frame_crop%29.jpg");
+        } 
+
       });
       
     </script>

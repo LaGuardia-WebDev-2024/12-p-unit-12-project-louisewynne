@@ -50,3 +50,7 @@ hr {
   width: 400px;
   height: 50%;
 }
+
+#painting-text, #album-text, #book-text, #movie-text{
+  text-align: center;
+}
