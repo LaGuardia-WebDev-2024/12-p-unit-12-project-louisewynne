@@ -9,8 +9,8 @@ Select ONE Additional Feature to Add
 [ no ] Feature 1 - Google Font
 [ no ] Feature 2 - Chain jQuery Methods
 [ no ] Feature 3 - .mouseover() & .mouseOut() Methods
-[ no ] Feature 4 - :hover Feature 
-[ no ] Feature 5 - Add an Additional Interactive Drop-down
+[ yes ] Feature 4 - :hover Feature 
+[ yes ] Feature 5 - Add an Additional Interactive Drop-down
 -->
 
 <!DOCTYPE html>
@@ -21,7 +21,7 @@ Select ONE Additional Feature to Add
     <link href="style.css" rel="stylesheet" type="text/css" />
   </head>
   <body>
-    <h1>Quiz About Me (louise)</h1>
+    <h1>Quiz About Me (Louise)</h1>
     <hr />
     <!-- Movie Question -->
     <div class="container">
@@ -29,7 +29,7 @@ Select ONE Additional Feature to Add
       <div class="q1">
       <label>
         What is my favorite movie?<br>
-        <select id="movie-answer">
+        <select id="movie-answer" class="label">
           <option value="movie1">Drop Dead Gorgeous</option>
           <option value="movie2">Princess Bride</option>
           <option value="movie3">Pride and Prejudice (2005)</option>
@@ -41,27 +41,27 @@ Select ONE Additional Feature to Add
     </form>
     <div id="movie-result">
       <p id="movie-text"></p>
-      <img class="movie-img" width="100px">
+      <img class="movie-img" >
     </div>
     
   </div>
     <!-- Book Question -->
      <div class="q2">
     <form id="book-form">
-      <label>
+      <label >
         What is my favorite book?
-        <select id="book-answer">
-          <option value="book1">Frankenstein by Mary Shelley</option>
-          <option value="book2">Pride and Prejudice by Jane Austin</option>
-          <option value="book3">The Little Mermaid by Hans Christian Anderson</option>
-          <option value="book4">Wuthering Heights by Emily Bronte</option>
+        <select id="book-answer" class="label">
+          <option value="book1" class="options">Frankenstein by Mary Shelley</option>
+          <option value="book2" class="options">Pride and Prejudice by Jane Austin</option>
+          <option value="book3" class="options">The Little Mermaid by Hans Christian Anderson</option>
+          <option value="book4" class="options">Wuthering Heights by Emily Bronte</option>
         </select>
       </label>
       <button type="submit">Check Book Answer</button>
     </form>
     <div id="book-result">
       <p id="book-text"></p>
-      <img class="book-img" width="100px">
+      <img class="book-img" >
     </div>
   </div>
     <!-- Album Question -->
@@ -69,7 +69,7 @@ Select ONE Additional Feature to Add
     <form id="album-form">
       <label>
         What is my favorite album?
-        <select id="album-answer">
+        <select id="album-answer" class="label">
           <option value="album1">Like a Prayer by Madonna</option>
           <option value="album2">Purple Rain by Prince</option>
           <option value="album3">Lifes Too Good by The Sugarcubes</option>
@@ -81,7 +81,7 @@ Select ONE Additional Feature to Add
     </form>
     <div id="album-result">
       <p id="album-text"></p>
-      <img class="album-img" width="100px">
+      <img class="album-img" >
     </div>
   </div>
     <!-- Painting Question -->
@@ -89,7 +89,7 @@ Select ONE Additional Feature to Add
     <form id="painting-form">
       <label>
         What is my favorite panting?
-        <select id="painting-answer">
+        <select class="label"id="painting-answer">
           <option value="painting1">Dream of the Shepherd by Ferdinand Hodler</option>
           <option value="painting2">Music by Gustav Klimpt</option>
           <option value="painting3">Yellow Dancers (In the Wings) by Eduard Degas</option>
@@ -100,7 +100,7 @@ Select ONE Additional Feature to Add
     </form>
     <div id="painting-result">
       <p id="painting-text"></p>
-      <img class="painting-img" width="100px">
+      <img class="painting-img">
     </div>
     </div>
     </div>
@@ -167,7 +167,7 @@ Select ONE Additional Feature to Add
 
         if (answer === "album3") {
           $("#album-text").text("Yep");
-          $(".album-img").attr("src", "https://cdn.shoplightspeed.com/shops/636018/files/58615043/132x132x1/one-little-independent-sugarcubes-the-lifes-too-go.jpg");
+          $(".album-img").attr("src", "https://upload.wikimedia.org/wikipedia/en/7/7d/The_Sugarcubes_-_Life%27s_Too_Good.png");
         } 
         if (answer === "album1") {
           $("#album-text").text("noo");
@@ -209,6 +209,10 @@ Select ONE Additional Feature to Add
         } 
 
       });
+
+      var $image = $(".painting-img");
+
+      $("button").click
       
     </script>
   </body>
