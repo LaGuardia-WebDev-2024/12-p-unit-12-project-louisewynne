@@ -105,22 +105,38 @@ Select ONE Additional Feature to Add
     </div>
     </div>
 
-    <p class="correctness"></p>
+    <p class="correct"> ✔ </p>
+    <p class="wrong"> × </p>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
     <script>
       
       //========================Movie Question jQuery Code
+      $(".correct").hide();
+      $(".wrong").hide();
+
       $("#movie-form").on("submit", function (event) {
         event.preventDefault();
 
         var $answer = $("#movie-answer");
         var answer = $answer.val();
 
+
         if (answer === "movie2") {
           $("#movie-text").text("Yes😊");
           $(".movie-img").attr("src", "https://m.media-amazon.com/images/M/MV5BMjM0Nzk5NTc4OV5BMl5BanBnXkFtZTcwMDA2MzgxNA@@._V1_.jpg");
-        } 
+          $(".correct").hide().fadeIn();
+          $(".wrong").hide();
+          $("#movie-result").animate({
+            height: "300px"
+          });
+        } else {
+          $(".correct").hide();
+          $(".wrong").hide().fadeIn();
+          $("#movie-result").animate({
+            height: "300px"
+          });
+        }
         if (answer === "movie1"){
         $("#movie-text").text("I liked it a lot but no");
         $(".movie-img").attr("src", "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTIk6JKJeUPS4_A3nkIV3fExFOljjMeDT_exIe-aDlyw5GPLfgzjYlItgaInlohVx3F_WEFyQ&s=10");
@@ -158,7 +174,19 @@ Select ONE Additional Feature to Add
         if (answer === "book4") {
           $("#book-text").text("Yep");
           $(".book-img").attr("src", "https://www.hachettebookgroup.com/wp-content/uploads/2025/04/9781435171503_d23c00.jpg?w=419");
+          $(".correct").hide().fadeIn();
+          $(".wrong").hide();
+          $("#book-result").animate({
+            height: "300px"
+          });
+        } else {
+          $(".correct").hide();
+          $(".wrong").hide().fadeIn();
+          $("#book-result").animate({
+            height: "300px"
+          });
         } 
+
       });
 
       //=======================Album Question jQuery Code
@@ -171,7 +199,17 @@ Select ONE Additional Feature to Add
         if (answer === "album3") {
           $("#album-text").text("Yep");
           $(".album-img").attr("src", "https://upload.wikimedia.org/wikipedia/en/7/7d/The_Sugarcubes_-_Life%27s_Too_Good.png");
-          
+          $(".correct").hide().fadeIn();
+          $(".wrong").hide();
+          $("#album-result").animate({
+            height: "300px"
+          });
+        } else {
+          $(".correct").hide();
+          $(".wrong").hide().fadeIn();
+          $("#album-result").animate({
+            height: "300px"
+          });
         } 
         if (answer === "album1") {
           $("#album-text").text("noo");
@@ -198,6 +236,17 @@ Select ONE Additional Feature to Add
         if (answer === "painting1") {
           $("#painting-text").text("Yep");
           $(".painting-img").attr("src", "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTirJcvX0eFYawJl7_jjOlzcz06pqq4_1yKlA&s");
+          $(".correct").hide().fadeIn();
+          $(".wrong").hide();
+          $("#painting-result").animate({
+            height: "300px"
+          });
+        } else {
+          $(".correct").hide();
+          $(".wrong").hide().fadeIn();
+          $("#painting-result").animate({
+            height: "300px"
+          });
         } 
         if (answer === "painting2") {
           $("#painting-text").text("no");
@@ -216,7 +265,9 @@ Select ONE Additional Feature to Add
 
       var $image = $(".painting-img");
 
-      $("button").click
+      $(".submit").click(function(){
+        $(".correctness").fadeIn();
+      })
       
     </script>
   </body>
